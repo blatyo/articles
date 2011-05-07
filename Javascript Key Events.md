@@ -3,11 +3,11 @@ I just recently spent a while learning the mechanics of key events in javascript
 ### Getting the Key
 The first problem I encountered was how to get the key from the event. Internet Explorer uses `event.keyCode` to store the numeric representation of the key. Mozilla historically used `event.which`, but now uses either `event.keyCode` and `event.charCode` depending on the circumstance. However, `event.which` is still supported and always contains the key code, whereas only one of either `event.keyCode` or `event.charCode` contain the key code. Because of these oddities, it is necessary to use some logic to figure out exactly what has the key we want. For that we do the following:
 
-{% code javascript %}
+@@@ javascript
 
     var key = event.which || event.keyCode;
 
-{% endcode %}
+@@@
 
 We can check if `event.which` exists. If it does we are on Mozilla and will get the `event.which` property to get the key code. If it doesn't exist then that means we are on Internet Explorer and we need to check the `event.keyCode` property.
 
