@@ -1,7 +1,0 @@
-The other day in my Data Communication and Networks class my teacher asked us a very uninteresting question. What is necessary for a network application? The students in the class suggested a connection, a protocol to communicate, and data to transfer. The teacher said yes to each of those and then he opened up Firefox and downloaded a file. He asked us why does Firefox show a progress bar? Because network latency isn't zero.
-
-He intended to teach us an important lesson about not assuming that communication is instantaneous. However, every story has more than one moral and the one I got from his lecture was that software needs to communicate with the user. Why does Firefox show a progress bar? Because otherwise the user wouldn't know that something is going on, they would assume it was broken, and they wouldn't have faith in it.
-
-Developers have the tendency to think of their software as a tool to accomplish a job. I think a better mindset would be to [anthropomorphize][1] your software. Pretend it is another person; one that your users will interact and communicate with and that will talk back. When I ask a person to do something I expect them to acknowledge what I said, give me feedback on what I asked them to do, and to tell me when they are done. If you treat your software like it is another person you begin to put constraints on it that you might not have done otherwise.
-
-[1]: http://www.google.com/search?hl=en&safe=off&q=define:anthropomorphize&btnG=Search
