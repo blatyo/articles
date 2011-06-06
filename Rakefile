@@ -15,7 +15,7 @@ task :publish do
   if old_file_name =~ /^(.+\/)?(.+)(\.md)$/
     date = Date.today.strftime("%Y-%m-%d")
 
-    new_file_name = %Q|#{$1}#{date}#{$2}#{category}#{tags}#{$3}|
+    new_file_name = %Q|#{$1}#{date} #{$2}#{category}#{tags}#{$3}|
 
     system %Q[git mv "#{old_file_name}" "#{new_file_name}"]
     system %Q[git commit -m "Publish #{$2}"]
