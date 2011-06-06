@@ -18,7 +18,7 @@ task :publish do
     new_file_name = %Q|#{$1}#{date}#{$2}#{category}#{tags}#{$3}|
 
     system %Q[git mv "#{old_file_name}" "#{new_file_name}"]
-    system %Q[git commit -m "Publish #{file_name}"]
+    system %Q[git commit -m "Publish #{$2}"]
   else
     raise "That's not an article!"
   end
